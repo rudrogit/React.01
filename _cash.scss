@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+$white:#fff;
+$black:black;
+$primary:#0097e6;
+$secondary:#2c2c54;
+$btncolor:#44bd32;
+$bgcolor:#808e9b; 
+$font-w4:400;
+$font-w5:500;
+$font-w6:600;
+$font-w7:700;
+$boxshado:0px 1px 16px 1px rgba(255,255,255,1);
+
+@mixin flexbox-row(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:row;
+}
+@mixin flexbox-colume(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@mixin flexbox-justify(){
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-direction:row;
+}
+@mixin btn(){
+   border:none;
+   outline: none;
+   cursor: pointer;
+   color: $white;
+   font-size:18px;
+   padding:10px 25px;
+   border-radius:30px;
+   box-shadow: $boxshado;
+   background-color: $btncolor; 
+}
+@mixin borderbottom(){
+    text-align: center;
+    display: inline-block;
+    padding-bottom:10px;
+    border-bottom:4px solid $btncolor;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
