@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  transition: 0.3s linear;
+  font-family: "Open Sans", sans-serif;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+  color: #fff;
+  background-color: #0097e6;
+}
+nav .logo {
+  width: 20%;
+}
+nav h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+nav .innericon {
+  display: none;
+}
+nav ul {
+  width: 60%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+nav ul li:hover {
+  border-radius: 0px;
+  background-color: #0097e6;
+}
+nav ul li:hover > ul {
+  display: block;
+}
+nav ul li {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+nav ul li a sup i {
+  padding-left: 10px;
+}
+nav ul li ul {
+  width: 200px;
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background-color: #808e9b;
+  flex-direction: column;
+}
+nav ul li ul li {
+  border-radius: 0px;
+}
+
+@media (max-width: 400px) {
+  nav {
+    padding: 15px;
+  }
+  nav .logo {
+    width: 70%;
+  }
+  nav .logo h2 {
+    font-size: 1.5rem;
+  }
+  nav .innericon {
+    display: block;
+    padding: 8px 10px;
+    margin: 0% 10%;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    background-color: #2c2c54;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  nav .innericon i {
+    font-size: 18px;
+  }
+  nav ul {
+    transition: 0.3s linear;
+    transform: scaleY(0);
+    transform-origin: top;
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2c2c54;
+  }
+  nav ul .liremove {
+    padding: 0;
+  }
+  nav ul .liremove a {
+    padding: 10px 20px;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li li:hover {
+    background-color: #0097e6;
+  }
+  nav ul li .innerul {
+    padding: 0;
+    width: 100%;
+    top: 10px;
+    position: relative;
+    background-color: #2c2c54;
+  }
+  .show-nav {
+    transform: scaleY(1);
+    animation: anim 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  }
+  .show-nav .innerul {
+    transform: scaleY(1);
+  }
+  .rotet {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 1000px) {
+  nav {
+    padding: 15px;
+  }
+  nav .logo {
+    width: 70%;
+  }
+  nav .logo h2 {
+    font-size: 1.5rem;
+  }
+  nav .innericon {
+    display: block;
+    padding: 8px 10px;
+    margin: 0% 10%;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    background-color: #2c2c54;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  nav .innericon i {
+    font-size: 18px;
+  }
+  nav ul {
+    transition: 0.3s linear;
+    transform: scaleY(0);
+    transform-origin: top;
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2c2c54;
+  }
+  nav ul .liremove {
+    padding: 0;
+  }
+  nav ul .liremove a {
+    padding: 10px 20px;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li li:hover {
+    background-color: #0097e6;
+  }
+  nav ul li .innerul {
+    padding: 0;
+    width: 100%;
+    top: 10px;
+    position: relative;
+    background-color: #2c2c54;
+  }
+  .show-nav {
+    transform: scaleY(1);
+    animation: anim 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  }
+  .show-nav .innerul {
+    transform: scaleY(1);
+  }
+  .rotet {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=main.css.map */

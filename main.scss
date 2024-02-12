@@ -1,0 +1,258 @@
+@import './response';
+@import './work';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+$white:#fff;
+$black:black;
+$primary:#0097e6;
+$secondary:#2c2c54;
+$btncolor:#44bd32;
+$bgcolor:#808e9b; 
+$font-w4:400;
+$font-w5:500;
+$font-w6:600;
+$font-w7:700;
+$boxshado:0px 1px 16px 1px rgba(255,255,255,1);
+
+@mixin flexbox-row(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:row;
+}
+@mixin flexbox-colume(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@mixin flexbox-justify(){
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-direction:row;
+}
+@mixin btn(){
+   border:none;
+   outline: none;
+   cursor: pointer;
+   color: $white;
+   font-size:18px;
+   padding:10px 25px;
+   border-radius:30px;
+   box-shadow: $boxshado;
+   background-color: $btncolor; 
+}
+@mixin borderbottom(){
+    text-align: center;
+    display: inline-block;
+    padding-bottom:10px;
+    border-bottom:4px solid $btncolor;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: .3s linear;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px 0px;
+    color: $white;
+    background-color: $primary;
+    .logo{
+        width:20%;
+    }
+    h2{
+       font-size:2rem ;
+       font-weight: $font-w7;
+    }
+    .innericon{
+        display: none;
+    }
+    ul{
+        width:60%;
+        margin:0;
+        padding: 0;
+        @include flexbox-row();
+        li:hover{
+            border-radius: 0px;
+            background-color: $primary;
+        }
+        li:hover > ul{
+           display: block;
+        }
+        li{
+           position: relative;
+           padding:10px 20px;
+           border-radius:5px;
+           cursor: pointer;
+           a sup i{
+            padding-left:10px;
+           }
+           ul{
+            width:200px;
+            display: none;
+            position: absolute;
+            top:45px; left:0;
+            background-color:$bgcolor;
+            flex-direction: column;
+            li{
+                border-radius:0px;
+            }
+           }
+        }
+
+    }
+}
+
+@media (max-width:400px) {
+    nav{
+         padding:15px;
+        .logo{
+            width:70%;
+          h2{font-size:1.5rem ;}  
+            }
+        .innericon{
+            display: block;
+            padding:8px 10px;
+            margin:0% 10%;
+            cursor: pointer;
+            border-radius:5px;
+            position: relative;
+            background-color: $secondary;
+            @include flexbox-row();
+            i{font-size:18px;}
+        }
+        ul{
+           transition: .3s linear;
+           transform: scaleY(0);
+           transform-origin: top ;
+            //ADD
+          width:100%;
+          position: absolute;
+          top:64px; left:0;
+          @include flexbox-colume();
+          background-color: $secondary;
+
+          .liremove{
+            padding:0;
+            a{padding: 10px 20px;}
+          }
+          li{
+              width:100%;
+            li:hover{background-color: $primary;}
+            .innerul{
+                padding:0;
+                width:100%;
+                top: 10px;
+                position: relative;
+                background-color: $secondary;
+              }
+          }
+        }
+    }
+
+
+.show-nav{
+    transform: scaleY(1);
+    animation:anim 1s cubic-bezier(1,0,0.5, 1)  forwards;
+    .innerul{
+        transform: scaleY(1); 
+    }
+}
+.rotet{
+   transform: rotate(360deg);
+}
+}
+
+@media (max-width:1000px) {
+    nav{
+         padding:15px;
+        .logo{
+            width:70%;
+          h2{font-size:1.5rem ;}  
+            }
+        .innericon{
+            display: block;
+            padding:8px 10px;
+            margin:0% 10%;
+            cursor: pointer;
+            border-radius:5px;
+            position: relative;
+            background-color: $secondary;
+            @include flexbox-row();
+            i{font-size:18px;}
+        }
+        ul{
+           transition: .3s linear;
+           transform: scaleY(0);
+           transform-origin: top ;
+            //ADD
+          width:100%;
+          position: absolute;
+          top:64px; left:0;
+          @include flexbox-colume();
+          background-color: $secondary;
+
+          .liremove{
+            padding:0;
+            a{padding: 10px 20px;}
+          }
+          li{
+              width:100%;
+            li:hover{background-color: $primary;}
+            .innerul{
+                padding:0;
+                width:100%;
+                top: 10px;
+                position: relative;
+                background-color: $secondary;
+              }
+          }
+        }
+    }
+
+
+.show-nav{
+    transform: scaleY(1);
+    animation:anim 1s cubic-bezier(1,0,0.5, 1)  forwards;
+    .innerul{
+        transform: scaleY(1); 
+    }
+}
+.rotet{
+   transform: rotate(360deg);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
